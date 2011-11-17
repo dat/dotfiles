@@ -1,0 +1,47 @@
+# maximum and minimum number of peers to connect to per torrent
+#min_peers = 8
+max_peers = 128
+
+# same as above for completed torrents
+#min_peers_seed = 8
+max_peers_seed = 8
+
+# maximum number of simulatenous uploads per torrent
+max_uploads = 16
+
+# global upload/download rates
+download_rate = 0
+upload_rate = 256
+
+# default directory to save downloaded torrents
+directory = /srv/alpha/downloads
+
+# session directory
+session = /home/dth/.session/
+
+# directories to watch for torrents
+#schedule = watch_directory,5,5,load_start=/srv/torrents
+#schedule = untied_directory,5,5,stop_untied=
+#schedule = tied_directory,5,5,start_tied=
+
+#close torrents when diskspace is low
+schedule = low_diskspace,5,60,close_low_diskspace=100M
+
+#port range listening to
+#port_range = 49160-49168
+
+#check hash for finished torrents
+check_hash = yes
+
+#encryption options
+#allow_incoming, try_outgoing, require, require_RC4, enable_retry, prefer_plaintex
+encryption = require,enable_retry
+
+#preallocate files to reduce filesystem fragmentation
+#system.file_allocate.set = yes
+
+#scgi
+scgi_port = localhost:5000
+
+#scgi socket
+#scgi_local = /tmp/rpc.socket
