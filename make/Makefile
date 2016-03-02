@@ -2,7 +2,7 @@
 # Quick and dirty build file
 #
 
-SHELL := /bin/bash
+SHELL := /bin/sh
 RM := rm -rf
 
 # preprocessor includes
